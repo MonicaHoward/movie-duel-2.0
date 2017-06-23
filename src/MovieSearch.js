@@ -1,12 +1,31 @@
 import React from 'react';
 
 class MovieSearch extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      movieSearch: ''
+    };
+  }
+  handleChange(evt) {
+    this.setState({
+      movieSearch: evt.target.value
+    })
+  }
+
   render() {
+
     return (
-      <div>
-        <input>
+      <form className="movie-search-component">
+        <input
+          type="text"
+          className="movie-input"
+          onChange={(evt) => this.handleChange(evt)}
+          value={this.state.movieSearch}>
         </input>
-      </div>
+        {this.setState.movieSearch}
+
+      </form>
     )
   }
 }

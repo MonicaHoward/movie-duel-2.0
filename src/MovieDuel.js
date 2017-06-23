@@ -5,8 +5,10 @@ class MovieDuel extends React.Component {
   render() {
     return (
       <div>
-        <MovieSearch />
-        <MovieSearch />
+        <MovieSearch
+          className="movie-search"/>
+        <MovieSearch
+          className="movie-search"/>
       </div>
     )
   }
