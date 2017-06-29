@@ -1,3 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:800|Gruppo');
+
 .App {
   text-align: center;
+}
+/*HEADER STUFF GOES HERE*/
+.header {
+  margin: 30px;
+  border-bottom: 3px dotted #FFFFFF;
+}
+.header h1{
+  color: #FFFFFF;
+  float: left;
+  font-family: 'Exo', sans-serif;
+}
+.nav li{
+  color: #FFFFFF;
+  float: right;
+  font-family: 'Gruppo', sans-serif;
+  font-size: 1.5em;
+  list-style-type: none;
+  margin: 30px;
+}
+/*INPUT STUFF GOES HERE*/
+form {
+
+  margin: 150px auto;
+}
+input {
+  background: #00000F;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Gruppo', sans-serif;
+  font-family: 'Gruppo', sans-serif;
+  font-size: 2.5em;
+  padding: 10px;
+  width: 80%;
+}
+/*SEARCH RESULTS GOES HERE*/
+.movie-result {
+  background: #FFFFFF;
+  border-radius: 6px;
+  list-style-type: none;
+  margin: 0 auto;
+  overflow: auto;
+  width: 80%;
+}
+.movie-poster {
+  background: #2C4251;
+  height: 120px;
+  float: left;
+  margin: 10px;
+  width: 75px;
+}
+.movie-info {
+  float: left;
+}
+.movie-info p {
+  float: left;
+}
+.movie-score {
+  border-left: 3px dotted gray;
+  float: right;
+  margin: 10px 50px;
+}
+.movie-score h2 {
+  margin: 10px 20px;
 }
