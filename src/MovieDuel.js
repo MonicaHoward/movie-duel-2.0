@@ -24,7 +24,7 @@ class Input extends React.Component {
     )
   }
 }
-class SearchResults extends React.Component {
+class SearchResult extends React.Component {
   render() {
     return (
       <li className="movie-result">
@@ -43,6 +43,15 @@ class SearchResults extends React.Component {
     )
   }
 }
+class ResultsList extends React.Component {
+  render() {
+    return(
+      <ul>
+        {this.props.children}
+      </ul>
+    )
+  }
+}
 
 class MovieDuel extends React.Component {
   render() {
@@ -50,7 +59,9 @@ class MovieDuel extends React.Component {
       <div>
         <Header />
         <Input />
-        <SearchResults />
+        <ResultsList>
+          <SearchResult />
+        </ResultsList>
       </div>
     )
   }
