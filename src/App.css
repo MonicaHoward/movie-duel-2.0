@@ -67,3 +67,23 @@ input {
 .movie-score h2 {
   margin: 10px 20px;
 }
+/*ABOUT PAGE STUFF GOES HERE*/
+.about {
+  color: #FFFFFF;
+  font-family: 'Gruppo', sans-serif;
+  font-size: 2em;
+  margin: 0 auto;
+  width: 80%;
+}
+.about h1 {
+  font-family: 'Exo', sans-serif;
+}
+.about p {
+  line-height: 2;
+}
+.about h6 {
+  border: 3px dotted #FFFFFF;
+  margin: 0 auto;
+  padding: 10px;
+  width: 20%;
+}

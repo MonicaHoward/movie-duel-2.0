@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from  './Header.js';
-
 import MovieDuel from './MovieDuel.js';
+import About from './About.js';
 import './App.css';
 
 class App extends Component {
@@ -10,6 +10,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <MovieDuel />
+        <About />
       </div>
     );
   }
