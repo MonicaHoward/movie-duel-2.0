@@ -1,19 +1,6 @@
 import React from 'react';
 
-class Header extends React.Component {
-  render() {
-    return (
-      <div className="header">
-        <h1>MOVIE DUEL</h1>
-        <ul className="nav">
-          <li>about</li>
-          <li>movie search</li>
-          <li>movie duel</li>
-        </ul>
-      </div>
-    )
-  }
-}
+
 class Input extends React.Component {
   render() {
     return (
@@ -57,7 +44,6 @@ class MovieDuel extends React.Component {
   render() {
     return (
       <div>
-        <Header />
         <Input />
         <ResultsList>
           <SearchResult />
