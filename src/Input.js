@@ -5,7 +5,9 @@ class Input extends React.Component {
     return (
       <form>
         <input
-          placeholder="enter a movie title..."/>
+          placeholder="enter a movie title..."
+          onChange={this.props.onChangeHandler}
+          onKeyUp={this.props.onKeyUpHandler}/>
       </form>
     )
   }

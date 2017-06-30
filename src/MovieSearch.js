@@ -1,13 +1,47 @@
 import React from 'react';
+import $ from 'jquery';
 import Input from './Input.js';
 import ResultsList from './ResultsList.js';
 import SearchResult from './SearchResult.js';
 
+
 class MovieSearch extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      allMovieData: [],
+      searchQuery: ''
+    }
+
+  }
+
+  handleChange(evt) {
+    this.setState({
+      searchQuery: evt.target.value
+    })
+  }
+
+  handleKeyUp(evt) {
+    if (evt.keyCode !== 13) {
+      console.log("hello", this.state.searchQuery)
+      $.ajax({
+        url: `https://api.themoviedb.org/3/search/movie?api_key=dec457859cd32502859fced3c3ca8ede&query=${this.state.searchQuery}`,
+      })
+      .done((data)=> {
+        this.setState = ({
+          allMovieData: data.results
+        })
+        console.log("this should be the only ajax call, right?", data.results);
+      });
+    }
+  }
+
   render() {
     return (
       <div className="movie-search">
-        <Input />
+        <Input
+          onChangeHandler={this.handleChange.bind((this))}
+          onKeyUpHandler={this.handleKeyUp.bind((this))}/>
         <ResultsList>
           <SearchResult />
         </ResultsList>
