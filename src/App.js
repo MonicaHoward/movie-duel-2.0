@@ -13,7 +13,7 @@ class App extends Component {
         <div className="App">
           <Header />
 
-          <Route path="/movie-duel" component={ MovieDuel } />
+          <Route path="/" component={ MovieDuel } />
           <Route path="/movie-search" component={ MovieSearch } />
           <Route path="/about"  component={ About } />
         </div>

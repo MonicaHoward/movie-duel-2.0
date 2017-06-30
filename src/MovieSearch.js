@@ -1,8 +1,8 @@
 import React from 'react';
 import $ from 'jquery';
 import Input from './Input.js';
-import ResultsList from './ResultsList.js';
-import SearchResult from './SearchResult.js';
+// import ResultsList from './ResultsList.js';
+// import SearchResult from './SearchResult.js';
 
 
 class MovieSearch extends React.Component {
@@ -26,8 +26,6 @@ class MovieSearch extends React.Component {
 
   handleKeyUp(evt) {
     if (evt.keyCode === 13) {
-
-      console.log("hello", this.state.searchQuery)
       $.ajax({
         url: `https://api.themoviedb.org/3/search/movie?api_key=dec457859cd32502859fced3c3ca8ede&query=${this.state.searchQuery}`,
       })
@@ -60,10 +58,7 @@ class MovieSearch extends React.Component {
           </li>
         )
       });
-
     }
-
-
     return (
       <div className="movie-search">
         <Input
