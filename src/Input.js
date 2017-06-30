@@ -7,7 +7,8 @@ class Input extends React.Component {
         <input
           placeholder="enter a movie title..."
           onChange={this.props.onChangeHandler}
-          onKeyUp={this.props.onKeyUpHandler}/>
+          onKeyUp={this.props.onKeyUpHandler}
+        />
       </form>
     )
   }
