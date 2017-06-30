@@ -52,7 +52,9 @@ class Header extends React.Component {
             <li>
                <NavLink exact activeClassName="active" to='/movie-duel'>movie duel</NavLink>
             </li>
-
+            <li>
+               <NavLink  activeClassName="active" to='/'></NavLink>
+            </li>
           </ul>
         </div>
       </div>
