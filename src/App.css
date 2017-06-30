@@ -67,6 +67,17 @@ input {
 .movie-score h2 {
   margin: 10px 20px;
 }
+/*MOVIE DUEL STUFF GOES HERE*/
+.movie-duel {
+  margin: 0 auto;
+  overflow: auto;
+  width: 100%;
+
+}
+.duel {
+  float: left;
+  width: 42%;
+}
 /*ABOUT PAGE STUFF GOES HERE*/
 .about {
   color: #FFFFFF;

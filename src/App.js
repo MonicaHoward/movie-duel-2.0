@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Header from  './Header.js';
 import MovieDuel from './MovieDuel.js';
+import MovieSearch from './MovieSearch.js';
 import About from './About.js';
 import './App.css';
 
@@ -13,6 +14,7 @@ class App extends Component {
           <Header />
             {/* <Link to="/movie-duel"> */}
               <MovieDuel />
+              <MovieSearch />
             {/* </Link>
             <Link to="/about"> */}
               <About />
