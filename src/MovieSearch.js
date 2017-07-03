@@ -13,8 +13,6 @@ class MovieSearch extends React.Component {
       searchQuery: ''
     }
     this.handleChange = this.handleChange.bind(this);
-
-
   }
 
   handleChange(evt) {
@@ -25,50 +23,26 @@ class MovieSearch extends React.Component {
   }
 
   handleKeyUp(evt) {
-    if (evt.keyCode === 13) {
-      $.ajax({
-        url: `https://api.themoviedb.org/3/search/movie?api_key=dec457859cd32502859fced3c3ca8ede&query=${this.state.searchQuery}`,
-      })
-      .done((data)=> {
-        this.setState = ({
-          allMovieData: data.results
+      if (evt.keyCode === 13) {
+        console.log("observing", this.state.searchQuery);
+        $.ajax({
+          url: `https://api.themoviedb.org/3/search/movie?api_key=dec457859cd32502859fced3c3ca8ede&query=${this.state.searchQuery}`,
         })
-        console.log("this should be the only ajax call, right?", data.results);
-      });
+        .done((data) => {
+          this.setState({
+            allMovieData: data.results
+          })
+          console.log("this should be the only ajax call, right?",data);
+        });
+      }
     }
-  }
 
   render() {
-    let displayThis;
-    if (this.state.allMovieData.length > 0) {
-      displayThis = this.state.allMovieData.map((movie) => {
-        return (
-          <li className="movie-result">
-            <div className="movie-poster">
-              {/* img tags goes here */}
-            </div>
-            <div className="movie-info">
-              <h1 className="movie-title">Movie Title {this.state.movie.title}</h1>
-              <p>Synopsis</p>
-            </div>
-            <div className="movie-score">
-              <h2>SCORE:</h2>
-              <h1>X</h1>
-            </div>
-          </li>
-        )
-      });
-    }
     return (
       <div className="movie-search">
         <Input
           onChangeHandler={this.handleChange.bind((this))}
-          onKeyUpHandler={this.handleKeyUp.bind((this))}
-          searchQuery={this.state.searchQuery}
-        />
-          <ul>
-            {displayThis}
-          </ul>
+          onKeyUpHandler={this.handleKeyUp.bind((this))}/>
 
       </div>
     )

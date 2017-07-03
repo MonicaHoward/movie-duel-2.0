@@ -60,6 +60,10 @@ input {
   margin: 10px;
   width: 75px;
 }
+img {
+  height: 120px;
+  width: 75px;
+}
 .movie-info {
   float: left;
 }
